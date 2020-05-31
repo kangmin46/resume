@@ -1,5 +1,6 @@
 - layout: top-middle
   name: 커피 주문 서비스 O2O
+  link : https://github.com/EDD-season2/caffeine-be
   quote: >
     2019.11.26 ~ 2019.12.27
   description: | # this will include new lines to allow paragraphs
