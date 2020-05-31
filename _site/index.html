@@ -91,18 +91,26 @@
   <h3>Projects</h3>
   
     <div class="row clearfix layout layout-top-middle">
-  <div class="col-xs-12 col-print-12 details"><h4>페이스북 <mark>Clone</mark> 프로젝트</h4>
-<a href="https://github.com/1-sunshine/miniprojects-2019" target="_blank" class="link">https://github.com/1-sunshine/miniprojects-2019</a></div>
-  <div class="col-xs-12 col-print-12"><p class="quote">2019.08.13 ~ 2019.09.04
+  <div class="col-xs-12 col-print-12 details"><h4>커피 주문 서비스 O2O</h4></div>
+  <div class="col-xs-12 col-print-12"><p class="quote">2019.11.26 ~ 2019.12.27
 </p><ul>
-  <li>우아한테크코스 미니프로젝트</li>
-  <li>게시글 CRUD, 게시글 공개 범위, 좋아요 기능 프론트와 서버 구현 담당</li>
-  <li>일정 관리, 회의, 회고 등 협업 경험(칸반 보드, Wiki 활용)</li>
-  <li>문서화(팀규칙, 컨벤션, 데일리, 회의록, 회고록, 개발 이슈 등)</li>
-  <li>ATDD 기반으로 구현(149tests, 94% classes 87% methods 90% lines covered)</li>
-  <li>OOP, 레이어드 아키텍처, 클린 코드를 중점으로 읽기 좋은 코드 작성에 집중</li>
-  <li>오프라인, 온라인(PR) 코드 리뷰 수행</li>
-  <li>Java8, Spring Boot, JPA, MySQL, Gradle, Junit5 + Mock, Javascript, Fetch API, HTML</li>
+  <li>주문과 매장 등록, 알림, 검색,  등의 다양한 도메인을 경험하고 해당 도메인을 토대로 Spring Data Jpa를 사용하여 개발</li>
+  <li>개발 도중 예외처리, 로그인 패스워드 확인 등, 비즈니스 로직이 아닌 인프라 로직의 중복이 발생하는 문제가 발생
+    <ul>
+      <li>AOP의 개념을 활용하여 각 각 ExceptionHandler, Interceptor 등을 적용하여 코드의 중복을 제거하고 관심사를 분리하여 해결.</li>
+    </ul>
+  </li>
+  <li>다양한 기능을 구현하며 Service Layer가 복잡해지는 문제가 발생
+    <ul>
+      <li>퍼사드 패턴의 개념을 프로젝트에 적용하여 Entity에 접근하는 InternerService 클래스와 각 Entity를 토대로 비즈니스 로직을 수행하는 Service클래스로 분리하여 문제를 해결</li>
+    </ul>
+  </li>
+  <li>Github Action, Nginx, Docker를 사용하여 배포 환경 구축
+    <ul>
+      <li>FrontEnd, BackEnd를 밸런싱 해주기 위하여 Nginx를 도입하여 리버스 프록시 용도로 사용</li>
+      <li>배포 환경을 원활하게 하기 위하여 Github Action을 이용하여 빌드 및 테스트 실행 후 Docker 이미지를 업로드하여 배포</li>
+    </ul>
+  </li>
 </ul>
 
   </div>
@@ -110,16 +118,28 @@
 
   
     <div class="row clearfix layout layout-top-middle">
-  <div class="col-xs-12 col-print-12 details"><h4>딥러닝 기반 교통 안전 카메라 시스템</h4>
-<a href="https://github.com/CODEMCD/Traffic-Safety-Camera-Using-YOLO" target="_blank" class="link">https://github.com/CODEMCD/Traffic-Safety-Camera-Using-YOLO</a></div>
-  <div class="col-xs-12 col-print-12"><p class="quote">2018.03 ~ 2018.06
+  <div class="col-xs-12 col-print-12 details"><h4>유튜브 클론 프로젝트</h4>
+<a href="https://github.com/everyone-driven-development/miniprojects-2019" target="_blank" class="link">https://github.com/everyone-driven-development/miniprojects-2019</a></div>
+  <div class="col-xs-12 col-print-12"><p class="quote">2019.08.13 ~ 2019.09.04
 </p><ul>
-  <li>대학 졸업 프로젝트</li>
-  <li>도로에서 쓰러진 사람과 교통에 방해 되는 요소 중 하나인 동물 사체를 인식하여 관련 기관에 알려주는 시스템</li>
-  <li>카메라 서버, 알람 서버와 통신하는 메인 서버를 C 언어로 구현 담당</li>
-  <li>실시간 환경에 적합한 YOLO 딥러닝 이미지 알고리즘 사용</li>
-  <li>카메라는 웹캠, 알람은 라즈베리파이를 사용하여 간소화</li>
-  <li>Ubuntu 16.04, C, YOLO, OpenCV(2.4.13.2), CUDA 8.0, cuDNN 6.0, MySQL</li>
+  <li>User, Comment, Subscription, Video등에 대한 CRUD 작업
+    <ul>
+      <li>FetchType 활용을 통한 성능 개선
+        <ul>
+          <li>Entity를 가져올 때  자신과 연관된 Entity를 실제로 사용할 때 연관된 엔티티를 조회(SELECCT )하는 지연 로딩을 구현하여 서버의 성능을 높임</li>
+        </ul>
+      </li>
+      <li>XSS(Cross-Site Scripting)공격을 방어하기 위한 XSS 필터를 적용하여 서버의 안정성을 높임</li>
+      <li>Paging 처리를 원활하게 하기 위하여 Pagable 인터페이스를 활용하여 Pagination 처리</li>
+    </ul>
+  </li>
+  <li>탄탄한 테스트를 만드는 데 집중
+    <ul>
+      <li>총 113개의 TestCase, TestCoverage : class(100%), method(97%), line(97%)</li>
+      <li>처음 인수 테스트의 개념을 배우고 직접 프로젝트에 적용해 보려고 실행</li>
+      <li>다양한 예외 상황에서의 TestCase를 추가하여 완성도 높은 프로젝트를 위해 고민</li>
+    </ul>
+  </li>
 </ul>
 
   </div>
@@ -132,13 +152,14 @@
   
     <div class="row clearfix layout layout-left">
   <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>우아한테크코스</h4>
-<a href="https://github.com/CODEMCD/woowacourse-projects" target="_blank" class="link">https://github.com/CODEMCD/woowacourse-projects</a><p>2019.05.07 ~ 2019.12.27</p></div>
-  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">실제 현업을 위한 웹 백엔드 교육(자바지기 박재성님)
+<a href="https://github.com/kangmin46/Woowahan_Tech_course" target="_blank" class="link">https://github.com/kangmin46/Woowahan_Tech_course</a><p>2019.05.07 ~ 2019.12.27</p></div>
+  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">우아한 형제들에서 창설한 9개월 간 일반 사용자용 서비스를 개발하는 회사가 필요로하는 역량을 키우는 것에 집중함으로써 재교육없이 현장의 업무를 바로 시작할 수 있도록 하는 교육 프로그램
 </p><ul>
-  <li>OOP, TDD, 클린코드를 기반한 JAVA 프로그래밍</li>
-  <li>Spring Boot, JPA를 활용한 웹 백엔드 구현</li>
-  <li>페어 프로그래밍, 프로젝트를 통한 협업 경험</li>
-  <li>현업에 필요한 말하기, 글쓰기 능력 향상을 위한 테코톡/글쓰기 미션</li>
+  <li>열정이 있는 개발자들과 협업하며 좋은 서비스를 만들고, 함께 고민하는 경험을 하기 위하여 우아한테크코스에 참여</li>
+  <li>페어 프로그래밍을 통해 협업을 하는 방법과 부족한 점을 찾고 페어의 장점을 흡수하는 경험을 통해 코드 리뷰의 중요성을 깨달음</li>
+  <li>MVC framework, WebServer, DI framework등을 직접 구현해보며 단순 학습이 아닌 직접 무엇인가를 만들어 보며 익히는 것의 효율성에 대해 깨닫고 학습 습관이 개선됨</li>
+  <li>다양한 미션을 진행하면서 문제가 발생하였을 때에 문제가 일어날 만한 부분만 따로 분리하여 테스트 코드를 작성하여 문제를 해결해보는 경험을 함으로서 테스트 하기 좋은 코드의 중요성에 대하여 배움</li>
+  <li>위와 같은 경험을 토대로 특정 기술에 대하여 그냥 사용하는 것이 아닌 해당 기술의 장점과 단점을 정확하게 파악하고 프로젝트에 적용하려고 하는 습관을 가지게 됨</li>
 </ul>
 
   </div>
@@ -146,25 +167,9 @@
 
   
     <div class="row clearfix layout layout-left">
-  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>POCU C++ 언매니지드  프로그래밍</h4>
-<a href="https://pocu.academy/ko/Courses/COMP3200" target="_blank" class="link">https://pocu.academy/ko/Courses/COMP3200</a><p>2019.01 ~ 2019.04</p></div>
-  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">실제 업계에서 쓰이는 C++ 프로그래밍 교육
-</p><ul>
-  <li>개발자가 하드웨어를 직접 관리하는 언매니지드 언어 교육</li>
-  <li>실습 및 과제는 자동화된 빌드봇을 통해 빠르게 피드백을 받을 수 있음</li>
-  <li>하드웨어 수준에서 OOP 동작 방식 이해</li>
-  <li>현업에서 자주 쓰는 모던 C++</li>
-</ul>
-
-  </div>
-</div>
-
-  
-    <div class="row clearfix layout layout-left">
-  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>금오공과대학교</h4>
-<a href="http://www.kumoh.ac.kr/ko/index.do" target="_blank" class="link">http://www.kumoh.ac.kr/ko/index.do</a><p>2012.03 ~ 2019.02</p></div>
+  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>창원대학교</h4><p>2012.03 ~ 2019.02</p></div>
   <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote"></p><ul>
-  <li>컴퓨터공학과</li>
+  <li>신소재공학부</li>
   <li>학사</li>
 </ul>
 
@@ -177,43 +182,14 @@
     <h3>기타 활동</h3>
     
       <div class="row clearfix layout layout-left">
-  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>개인 블로그</h4>
-<a href="https://velog.io/@codemcd" target="_blank" class="link">https://velog.io/@codemcd</a></div>
-  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">개인 기술 블로그
-</p><ul>
-  <li>배운 지식과 개발을 하며 만난 이슈, 회고 등을 정리하여 공유하기 위한 블로그입니다.</li>
-  <li>학습하며 좀 더 깊게 알고 싶거나 공유하고 싶은 지식 정리합니다.</li>
-  <li>개발하면서 문제를 해결하는 과정이나 알게 된 점 정리합니다.</li>
-  <li>일정 기간, 개발 등에 대해 느낀점과 부족한 점을 회고합니다.</li>
-</ul>
-
-  </div>
-</div>
-
-    
-      <div class="row clearfix layout layout-left">
-  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>TIL(Today I Learned)</h4>
-<a href="https://github.com/CODEMCD/TIL" target="_blank" class="link">https://github.com/CODEMCD/TIL</a></div>
-  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">하루동안 나의 개발 활동
-</p><ul>
-  <li>하루동안 수행한 개발, 구현한 코드 정리합니다.</li>
-  <li>인상깊었던 개발 컨텐츠 링크를 정리합니다.</li>
-  <li>개발하고 학습하는 과정에서 이를 결과물로 작성하여 지속적으로 동기부여를 얻고 있습니다.</li>
-</ul>
-
-  </div>
-</div>
-
-    
-      <div class="row clearfix layout layout-left">
   <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>Over-10 스터디</h4>
 <a href="https://github.com/Over-10-Study" target="_blank" class="link">https://github.com/Over-10-Study</a></div>
-  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">개발 관련 스터디
+  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">개발 관련 스터디(현재 MySQL 스터디 진행 중)
 </p><ul>
   <li>활동 기간: 2019.07 ~ 현재</li>
   <li>스터디원들과 상의하여 관심있는 주제를 정하여 스터디를 진행하고 있습니다.</li>
-  <li>결과물을 만드는 것과 이를 발표하는 형식으로 스터디를 진행하고 있습니다.</li>
-  <li>스터디에서 주로 문서 정리를 담당하고 있습니다.</li>
+  <li>스터디에서 발표를 진행하며 토론을 위주로 한 방식의 스터디를 하고 있습니다.</li>
+  <li>발표를 한 뒤 자료를 Github에 모아 정리합니다.</li>
 </ul>
 
   </div>
